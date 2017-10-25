@@ -1,0 +1,79 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+/* Global */
+
+
+.section {
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.section-dark {
+  background: #262626;
+  color: #f9f9f9;
+}
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.75;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /*
+   * fixed = parallax
+   * scroll = normal
+   */
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  height: 100vh;
+  background-image: url("../img/city1.jpeg");
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #f9f9f9;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pimg2 {
+  min-height: 50vh;
+  background-image: url("../img/city2.jpeg");
+}
+
+.pimg3 {
+  min-height: 50vh;
+  background-image: url("../img/city3.jpeg");
+}
+
+.ptext .border {
+  padding: 15px;
+  background: #222;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+/* Disable parallax for mobile devices */
+@media (max-width: 568px) {
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll;
+  }
+}
